@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ProjPickerJS UI</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+<div id="ready"></div>
+<textarea id="query" rows="24" cols="80"></textarea>
+<input type="submit" value="Run" onclick="run(); return false;" />
+<pre id="output"></pre>
+<script src="utils.js"></script>
+<script src="projpicker.js"></script>
+<script>
+let db = null;
+let readyEl = document.getElementById('ready');
+let queryEl = document.getElementById('query');
+let outputEl = document.getElementById('output');
+onLoadWindow(function(){
+	ajaxRequest('projpicker.json', null, function(xhr){
+		db = JSON.parse(xhr.response);
+		readyEl.innerHTML = 'Ready';
+	});
+});
+
+function run(){
+	let query = queryEl.value;
+	let lines = query.split('\n');
+	lines = tidyLines
+	outputEl.innerHTML = queryMixedGeoms(query);
+}
+</script>
+</body>
+</html>
