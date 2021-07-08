@@ -1,4 +1,4 @@
-# ProjPicker JavaScript
+# ProjPicker JavaScript (work in progress)
 
 [![PyPI version](https://badge.fury.io/py/projpicker.svg)](https://badge.fury.io/py/projpicker)
 [![Documentation Status](https://readthedocs.org/projects/projpicker/badge/?version=latest)](https://projpicker.readthedocs.io/en/latest/?badge=latest)
