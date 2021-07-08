@@ -1,14 +1,14 @@
 #!/bin/sh
 if [ "$1" = "-w" ]; then
-	file=../projpicker/ChangeLog.md
-	hash='[`%h`](https://github.com/HuidaeCho/projpicker/commit/%h)'
+	file=../projpicker-js/ChangeLog.md
+	hash='[`%h`](https://github.com/HuidaeCho/projpicker-js/commit/%h)'
 else
 	file=/dev/stdout
 	hash='%h'
 fi
 
 exclude=""
-for i in COPYING README.md setup.py data deploy docs guis tests utils; do
+for i in COPYING README.md setup.py deploy docs utils; do
 	exclude="$exclude :(exclude)../$i"
 done
 (
